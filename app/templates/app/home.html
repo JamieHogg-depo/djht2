@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+
+<body>
+
+    <br><br><br><br><br><br><br><br>
+
+    <form method="post" style="text-align: center;">
+        {% csrf_token %}
+
+            <input type="number" name="x" value="{{ x }}" step="0.01">
+        
+            <br>
+            <button type="submit" class="submit-button">Submit</button>
+        
+    </form>
+
+    <br><br><br><br>
+    <div style="text-align: center;">
+        <h1>Output: {{ out }}</h1>
+    </div>
+    
+    <br><br><br><br><br><br><br><br>
+
+    <figure style="text-align: center;">
+        <!-- <img src="{% static '../../static/app/CDS-Logo-Blue.png' %}" style="width:20%"> -->
+        <img src="{% static 'app/CDS-Logo-Blue.png' %}" style="width:20%">
+    </figure>
+    
+
+</body>
+</html>
